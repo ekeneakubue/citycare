@@ -91,13 +91,13 @@ export function Navbar() {
                         {isDropdownOpen && (
                             <div className="absolute right-0 mt-2 w-72 rounded-xl border border-gray-200 bg-white shadow-xl overflow-hidden z-50">
                                 {loginOptions.map((option) => (
-                                    <div
+                                    <button
                                         key={option.title}
                                         onClick={() => {
                                             router.push(option.href);
                                             setIsDropdownOpen(false);
                                         }}
-                                        className={`flex items-start gap-4 p-4 transition-colors ${option.hoverColor} border-b border-gray-100 last:border-b-0 cursor-pointer`}
+                                        className={`w-full flex items-start gap-4 p-4 transition-colors ${option.hoverColor} border-b border-gray-100 last:border-b-0 cursor-pointer text-left`}
                                     >
                                         <div className={`p-2 rounded-lg ${option.bgColor}`}>
                                             <option.icon className={option.color} size={20} />
@@ -110,7 +110,7 @@ export function Navbar() {
                                                 {option.description}
                                             </p>
                                         </div>
-                                    </div>
+                                    </button>
                                 ))}
                             </div>
                         )}

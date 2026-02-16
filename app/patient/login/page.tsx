@@ -27,6 +27,8 @@ export default function PatientLoginPage() {
         router.push("/admin");
       } else if (userType === 'doctor') {
         router.push("/doctor/dashboard");
+      } else if (userType === 'patient') {
+        router.push("/patient/dashboard");
       } else {
         router.push("/");
       }
